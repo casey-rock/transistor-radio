@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class NPC : Character {
 	private bool charInRange;
-	public string script;
+	public Dialogue dialogue;
+	public bool talkedTo = false;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +17,7 @@ public class NPC : Character {
 	void Update () {
 		if (charInRange && Input.GetKeyDown(KeyCode.Space))
 		{
-			Speak();
+			TriggerDialogue();
 		}
 	}
 
@@ -35,8 +37,16 @@ public class NPC : Character {
 		}
 	}
 
-	private void Speak()
+	private void TriggerDialogue()
 	{
-		Debug.Log(script);
+		if (!talkedTo)
+		{
+			talkedTo = true;
+			FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+		}
+		else
+		{
+			FindObjectOfType<DialogueManager>().DisplayNextSentence();
+		}
 	}
 }

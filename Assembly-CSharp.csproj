@@ -62,9 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character.cs" />
-    <Compile Include="Assets\Scripts\Dialog.cs" />
+    <Compile Include="Assets\Scripts\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <None Include="Assets\Dialog\NPC1.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/cr153/Desktop/GitHub/tutorials/transistor_radio/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

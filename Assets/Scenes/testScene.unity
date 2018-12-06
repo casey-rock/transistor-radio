@@ -150,7 +150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4296592748317336, guid: a0e4795a96d42924db5a9a5ee334a814, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4296592748317336, guid: a0e4795a96d42924db5a9a5ee334a814, type: 2}
       propertyPath: m_LocalScale.x
@@ -196,7 +196,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4593452832309894, guid: b4bf81b3e697e9c4c97b2f6be4bf3aae, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4bf81b3e697e9c4c97b2f6be4bf3aae, type: 2}
@@ -208,6 +208,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4.87
@@ -238,7 +243,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1102112301528400, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
       propertyPath: m_Name
@@ -249,9 +254,79 @@ Prefab:
       propertyPath: script
       value: You're speaking to me too! What a guy!
       objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.name
+      value: Dumpy Doo
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: I'm Dumpy Doo!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: You know I dump doo!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: I'll always dump doo!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: So pleeeeeeeease....
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: 'Dumpy Doo : )'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1290800600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290800601}
+  - component: {fileID: 1290800602}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1290800601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1290800600}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1290800602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1290800600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71cf9a5651ec524fb4c284b7325a06f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1650953644
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +402,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2051427527
 Prefab:
@@ -336,6 +411,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -366,12 +446,47 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
         type: 2}
       propertyPath: script
       value: Hey, you're speaking to me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: scriptPath
+      value: Assets/Dialog/NPC1.txt
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.name
+      value: Jimmy McDougal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Hey. Name's Jimmy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Don't talk to me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: Seriously.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: Stop.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: JUST KIDDING
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
