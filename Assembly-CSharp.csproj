@@ -63,7 +63,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <None Include="Assets\Dialog\NPC1.txt" />

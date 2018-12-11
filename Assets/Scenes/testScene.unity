@@ -113,6 +113,102 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &127739297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127739300}
+  - component: {fileID: 127739299}
+  - component: {fileID: 127739301}
+  - component: {fileID: 127739298}
+  m_Layer: 0
+  m_Name: DialogDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &127739298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 127739297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 2
+  m_Text: testetest
+--- !u!222 &127739299
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 127739297}
+  m_CullTransparentMesh: 0
+--- !u!224 &127739300
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 127739297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -3}
+  m_SizeDelta: {x: 20, y: 4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &127739301
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 127739297}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1001 &157289387
 Prefab:
   m_ObjectHideFlags: 0
@@ -201,6 +297,67 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4bf81b3e697e9c4c97b2f6be4bf3aae, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &778769075
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921004391564470, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102112301528400, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
+      propertyPath: m_Name
+      value: NPC (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.name
+      value: Alex
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: REEEEEEEEEEEE
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: REEEEEEEEEEEEEEEEEE
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &891862636
 Prefab:
   m_ObjectHideFlags: 0
@@ -287,46 +444,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1290800600
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1290800601}
-  - component: {fileID: 1290800602}
-  m_Layer: 0
-  m_Name: DialogueManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1290800601
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1290800600}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1290800602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1290800600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d71cf9a5651ec524fb4c284b7325a06f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1650953644
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,43 +567,33 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
         type: 2}
-      propertyPath: script
-      value: Hey, you're speaking to me!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
-        type: 2}
-      propertyPath: scriptPath
-      value: Assets/Dialog/NPC1.txt
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
-        type: 2}
       propertyPath: dialogue.name
       value: Jimmy McDougal
       objectReference: {fileID: 0}
     - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: Hey. Name's Jimmy.
+      value: Hey.
       objectReference: {fileID: 0}
     - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Don't talk to me.
+      value: Name's Jimmy.
       objectReference: {fileID: 0}
     - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Seriously.
+      value: Don't talk to me.
       objectReference: {fileID: 0}
     - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: Stop.
+      value: Seriously, stop.
       objectReference: {fileID: 0}
     - target: {fileID: 114008930692265998, guid: c56495e933670d84ab7ab22ea4075a7d,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: JUST KIDDING
+      value: I desperately want friends.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56495e933670d84ab7ab22ea4075a7d, type: 2}
