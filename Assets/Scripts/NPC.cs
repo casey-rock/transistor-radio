@@ -2,16 +2,23 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using TMPro;
 
 public class NPC : Character {
 	private bool charInRange;
 	public Dialogue dialogue;
 	public bool talkedTo = false;
 	private Queue<string> sentences;
+	public TextMeshProUGUI textPro;
+	private GameObject dialogDisplay;
+	private bool isTalking;
 
 	// Use this for initialization
 	void Start () {
 		charInRange = false;
+		textPro = FindObjectOfType<TextMeshProUGUI>();
+		dialogDisplay = GameObject.FindGameObjectWithTag("DialogDisplay");
+		dialogDisplay.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -44,6 +51,7 @@ public class NPC : Character {
 	//if NPC has been talked to before, displays next sentence; if not, loads dialogue and displays first sentence
 	private void TriggerDialogue()
 	{
+		dialogDisplay.SetActive(true);
 		if (!talkedTo)
 		{
 			talkedTo = true;
@@ -76,17 +84,13 @@ public class NPC : Character {
 		if (sentences.Count == 1)
 		{
 			sentence = sentences.Peek();
+			textPro.text = sentence;
 			Debug.Log(sentence);
 			return;
 		}
 
 		sentence = sentences.Dequeue();
+		textPro.text = sentence;
 		Debug.Log(sentence);
-	}
-
-	//ends dialogue
-	private void EndDialogue()
-	{
-		Debug.Log("CONVERSATION OVER");
 	}
 }
