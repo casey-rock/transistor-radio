@@ -8,10 +8,11 @@ public class NPC : Character {
 	private bool charInRange;
 	public Dialogue dialogue;
 	public bool talkedTo = false;
+	public bool windowIsActive = false;
 	private Queue<string> sentences;
 	public TextMeshProUGUI textPro;
 	private GameObject dialogDisplay;
-	private bool isTalking;
+	Player player;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,7 @@ public class NPC : Character {
 		textPro = FindObjectOfType<TextMeshProUGUI>();
 		dialogDisplay = GameObject.FindGameObjectWithTag("DialogDisplay");
 		dialogDisplay.SetActive(false);
+		player = FindObjectOfType<Player>();
 	}
 	
 	// Update is called once per frame
@@ -26,7 +28,12 @@ public class NPC : Character {
 		//if player is in range and presses space, triggers NPC dialogue
 		if (charInRange && Input.GetKeyDown(KeyCode.Space))
 		{
+			textPro.text = "";
 			TriggerDialogue();
+		}
+		if (!charInRange)
+		{
+			dialogDisplay.SetActive(false);
 		}
 	}
 
@@ -51,7 +58,7 @@ public class NPC : Character {
 	//if NPC has been talked to before, displays next sentence; if not, loads dialogue and displays first sentence
 	private void TriggerDialogue()
 	{
-		dialogDisplay.SetActive(true);
+		
 		if (!talkedTo)
 		{
 			talkedTo = true;
@@ -80,17 +87,59 @@ public class NPC : Character {
 	public void DisplayNextSentence()
 	{
 		string sentence;
-		//if last sentence in the queue, display it again
-		if (sentences.Count == 1)
+
+		if (windowIsActive == false)
 		{
-			sentence = sentences.Peek();
+			player.DisablePlayerMovement();
+			//if last sentence in the queue, display it again
+			if (sentences.Count == 1)
+			{
+				sentence = sentences.Peek();
+				textPro.text = sentence;
+				Debug.Log(sentence);
+				StartCoroutine(DisplayTextWindow());
+				return;
+			}
+
+			sentence = sentences.Dequeue();
 			textPro.text = sentence;
 			Debug.Log(sentence);
-			return;
+			StartCoroutine(DisplayTextWindow());
 		}
+		else
+		{
+			DeactivateTextWindow();
+			player.EnablePlayerMovement();
+		}
+	}
 
-		sentence = sentences.Dequeue();
-		textPro.text = sentence;
-		Debug.Log(sentence);
+	IEnumerator DisplayTextWindow()
+	{
+		dialogDisplay.SetActive(true);
+		windowIsActive = true;
+		yield return new WaitForSeconds(0.1f);
+		yield return WaitForKeyPress(KeyCode.Space);
+		DeactivateTextWindow();
+	}
+
+	private void DeactivateTextWindow()
+	{
+		textPro.text = "";
+		dialogDisplay.SetActive(false);
+		windowIsActive = false;
+	}
+
+	IEnumerator WaitForKeyPress(KeyCode key)
+	{
+		bool isTalking = true;
+
+		while (isTalking)
+		{
+			if (Input.GetKeyDown(key))
+			{
+				isTalking = false;
+			}
+			yield return null;
+		}
 	}
 }

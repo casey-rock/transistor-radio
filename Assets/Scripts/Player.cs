@@ -15,6 +15,16 @@ public class Player : Character {
 		
 	}
 
+	public void DisablePlayerMovement()
+	{
+		speed = 0f;
+	}
+
+	public void EnablePlayerMovement()
+	{
+		speed = 300f;
+	}
+
 	private void FixedUpdate()
 	{
 		direction.x = 0;
