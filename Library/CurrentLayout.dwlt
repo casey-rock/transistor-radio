@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 50
+    y: 42
     width: 1680
     height: 968
   m_ShowMode: 4
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 172
+  controlID: 29
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 448}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 65
+  controlID: 91
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 498}
   m_MaxSize: {x: 10004, y: 14048}
   vertical: 1
-  controlID: 104
+  controlID: 62
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 552
+    y: 544
     width: 889
     height: 426
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 80
+    y: 72
     width: 889
     height: 452
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -436,9 +436,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.247769, y: 0.4442317, z: -0.07118062}
+    m_Target: {x: -0.22085932, y: 1.585922, z: 0.041015625}
     speed: 2
-    m_Value: {x: -4.247769, y: 0.4442317, z: -0.07118062}
+    m_Value: {x: -0.22085932, y: 1.585922, z: 0.041015625}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -470,9 +470,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 16.992128
+    m_Target: 5.825492
     speed: 2
-    m_Value: 16.992128
+    m_Value: 5.825492
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 891
-    y: 80
+    y: 72
     width: 482
     height: 558
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -558,7 +558,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a2cbffffb6cbffff12cdffff52ceffff66ceffff6eceffff26cfffff3acfffff42cfffff0ad0ffff1ed0ffff26d0ffff56d1ffff6ad1ffffc6d2ffff7ed3ffff92d3ffff9ad3ffff46d5ffff5ad5ffff62d5ffffbad5ffffced5ffff0cd7fffffce6ffff10e7ffff4ee8ffff86fbffff96fbffffa8fbffffccfbffff623d00008c3d0000b23d0000d43d00006e450000924a0000be4a0000ec4a00002c4d0000584d0000864d0000c64f0000f24f000020500000
+      m_ExpandedIDs: 3cf0ffff50f0ffff96f1ffffa8f2ffff3e340000c6340000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 891
-    y: 658
+    y: 650
     width: 482
     height: 320
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -620,20 +620,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Sprites
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Sprites
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\NotDarren\Desktop\transistor-radio
+  m_LastProjectPath: C:\Users\cr153\Desktop\GitHub\tutorials\transistor_radio
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 54260000
-    m_LastClickedID: 9812
-    m_ExpandedIDs: 000000003226000000ca9a3b
+    m_SelectedIDs: be300000
+    m_LastClickedID: 12478
+    m_ExpandedIDs: 00000000c62f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -661,7 +661,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000032260000
+    m_ExpandedIDs: 00000000c62f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -713,7 +713,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 563}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 187
 --- !u!114 &19
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1377
-    y: 80
+    y: 72
     width: 301
     height: 898
   m_PersistentViewDataDictionary: {fileID: 0}
