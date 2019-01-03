@@ -8,6 +8,7 @@ public class Player : Character {
 	void Start () {
 		speed = 300f;
 		rb = GetComponent<Rigidbody2D>();
+		hp = 10;
 	}
 	
 	// Update is called once per frame

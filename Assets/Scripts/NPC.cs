@@ -29,7 +29,7 @@ public class NPC : Character {
 		if (charInRange && Input.GetKeyDown(KeyCode.Space))
 		{
 			textPro.text = "";
-			TriggerDialogue();
+			//TriggerDialogue();
 		}
 		if (!charInRange)
 		{
@@ -54,7 +54,7 @@ public class NPC : Character {
 			charInRange = false;
 		}
 	}
-
+	/*
 	//if NPC has been talked to before, displays next sentence; if not, loads dialogue and displays first sentence
 	private void TriggerDialogue()
 	{
@@ -71,6 +71,7 @@ public class NPC : Character {
 	}
 
 	//loads a queue with lines from Dialogue and displays first sentence
+	
 	public void StartDialogue(Dialogue dialogue)
 	{
 		sentences = new Queue<string>();
@@ -82,6 +83,7 @@ public class NPC : Character {
 
 		DisplayNextSentence();
 	}
+	
 
 	//displays next sentence in the queue
 	public void DisplayNextSentence()
@@ -112,6 +114,7 @@ public class NPC : Character {
 			player.EnablePlayerMovement();
 		}
 	}
+	*/
 
 	IEnumerator DisplayTextWindow()
 	{

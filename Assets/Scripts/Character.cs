@@ -6,6 +6,7 @@ public class Character : MonoBehaviour {
 	protected float speed;
 	protected Vector2 direction;
 	protected Rigidbody2D rb;
+	protected int hp;
 
 	// Use this for initialization
 	void Start () {
