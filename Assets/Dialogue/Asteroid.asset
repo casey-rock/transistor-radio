@@ -15,32 +15,33 @@ MonoBehaviour:
   npcID: 2
   sprite: {fileID: 21300000, guid: bc15c6ea9b0124465b164fd3e89c578d, type: 3}
   npcName: Asteroid
+  sound: {fileID: 8300000, guid: 470b0af3b7a989544a0f79db8b76ef26, type: 3}
   messages:
-  - text: I'm Dumpy Doo!
+  - text: Well Hello Arin!
     responses:
     - next: 1
       reply: Next
       prereq: 
       trigger: 
-  - text: You know I dump doo!
+  - text: This is MY GAME!!!
     responses:
     - next: 2
       reply: Next
       prereq: 
       trigger: 
-  - text: I'll always dump doo!
+  - text: LISTEN TO THE SOUNDSSSSSSSSSSSS
     responses:
     - next: 3
       reply: Next
       prereq: 
       trigger: 
-  - text: So pleeeeease....
+  - text: YAYA SOUNDS
     responses:
     - next: -1
       reply: First Exit
       prereq: 
       trigger: 
-  - text: Dumpy Doo :)
+  - text: Please set me free from this monster. Sincerely, your asteroid friend
     responses:
     - next: -1
       reply: Second Exit

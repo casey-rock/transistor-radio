@@ -10,12 +10,14 @@ public class TextHandler : MonoBehaviour
     TextMeshProUGUI UIText;
 	GameObject textBox;
 	Image portrait;
+	AudioSource audioSource;
 
     private void Awake()
     {
         UIText = GameObject.Find("Canvas").GetComponentInChildren<TextMeshProUGUI>();
 		textBox = GameObject.Find("TextBox");
 		portrait = GameObject.Find("Portrait").GetComponent<Image>();
+		audioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
 		
 		textBox.SetActive(false);
 	}
@@ -48,7 +50,8 @@ public class TextHandler : MonoBehaviour
         for(int i = 0; i < textArray.Length; i++)
         {
             UIText.text += textArray[i];
-            yield return new WaitForSeconds(0.1f);
+			audioSource.PlayOneShot(dialogue.sound);
+            yield return new WaitForSeconds(0.02f);
         }
 
         StartCoroutine(WaitForResponse(dialogueID));

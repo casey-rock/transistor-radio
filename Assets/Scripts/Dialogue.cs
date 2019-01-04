@@ -9,5 +9,7 @@ public class Dialogue : ScriptableObject
     public int npcID;
     public Sprite sprite;
     public string npcName;
-    public Message[] messages;
+	public AudioClip sound;
+	public Message[] messages;
+	
 }
