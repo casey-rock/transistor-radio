@@ -7,20 +7,11 @@ using TMPro;
 public class TextHandler : MonoBehaviour
 {
     Dialogue dialogue;
-    TextMeshProUGUI UIText;
-	GameObject textBox;
-	Image portrait;
-	AudioSource audioSource;
 
     private void Awake()
     {
-        UIText = GameObject.Find("Canvas").GetComponentInChildren<TextMeshProUGUI>();
-		textBox = GameObject.Find("TextBox");
-		portrait = GameObject.Find("Portrait").GetComponent<Image>();
-		audioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
-		
-		textBox.SetActive(false);
-	}
+        DialogueSystem.instance.textBox.SetActive(false);
+    }
 
     public void LoadDialogue(Dialogue d)
     {
@@ -31,12 +22,12 @@ public class TextHandler : MonoBehaviour
 
     public IEnumerator LoadText(int dialogueID)
     {
-        UIText.text = "";
+        DialogueSystem.instance.UIText.text = "";
         char[] textArray;
 
-		portrait.sprite = dialogue.sprite;
+        DialogueSystem.instance.portrait.sprite = dialogue.sprite;
 
-		textBox.SetActive(true);
+        DialogueSystem.instance.textBox.SetActive(true);
 
         if (dialogueID == 99)
         {
@@ -49,8 +40,8 @@ public class TextHandler : MonoBehaviour
 
         for(int i = 0; i < textArray.Length; i++)
         {
-            UIText.text += textArray[i];
-			audioSource.PlayOneShot(dialogue.sound);
+            DialogueSystem.instance.UIText.text += textArray[i];
+            DialogueSystem.instance.audioSource.PlayOneShot(dialogue.sound);
             yield return new WaitForSeconds(0.02f);
         }
 
@@ -81,14 +72,14 @@ public class TextHandler : MonoBehaviour
             }
             else
             {
-                UIText.text = "";
-				textBox.SetActive(false);
+                DialogueSystem.instance.UIText.text = "";
+                DialogueSystem.instance.textBox.SetActive(false);
             }
         }
         else
         {
-            UIText.text = "";
-			textBox.SetActive(false);
+            DialogueSystem.instance.UIText.text = "";
+            DialogueSystem.instance.textBox.SetActive(false);
         }
 
         yield return null;
@@ -96,7 +87,7 @@ public class TextHandler : MonoBehaviour
 
     public void EndOfConvo()
     {
-        if(UIText.text.CompareTo("") == 0)
+        if(DialogueSystem.instance.UIText.text.CompareTo("") == 0)
         {
             StartCoroutine(LoadText(dialogue.messages.Length-1));
         }

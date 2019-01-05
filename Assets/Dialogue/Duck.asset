@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d32cd10f91f8b341a331f915095578e, type: 3}
+  m_Name: Duck
+  m_EditorClassIdentifier: 
+  npcID: 4
+  sprite: {fileID: 21300000, guid: 0f0eb40c012383040aaf09c766591f6f, type: 3}
+  npcName: Beijing
+  sound: {fileID: 8300000, guid: 6f96538007501bc41bba4ce59fd6d245, type: 3}
+  messages:
+  - text: (The duck appears confused as to why he's upside down.)
+    responses:
+    - next: 1
+      reply: Next
+      prereq: 
+      trigger: 
+  - text: (One day, it swears it will flip right side up.)
+    responses:
+    - next: -1
+      reply: Exit
+      prereq: 
+      trigger: 
+  - text: (Seeing the giant duck never give up fills you with determination.)
+    responses:
+    - next: -1
+      reply: Exit
+      prereq: 
+      trigger: 
