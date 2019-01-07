@@ -5,7 +5,6 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public Dialogue dialogue;
-    public TextHandler textHandler;
     public bool interactedWith = false;
 	bool playerInRange = false;
 
@@ -21,12 +20,12 @@ public class Interactable : MonoBehaviour
     {
         if (interactedWith == false)
         {
-            textHandler.LoadDialogue(dialogue);
+            DialogueSystem.instance.textHandler.LoadDialogue(dialogue);
             interactedWith = true;
         }
         else
         {
-            textHandler.EndOfConvo();
+			DialogueSystem.instance.textHandler.EndOfConvo();
         }
 
     }

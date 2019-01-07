@@ -8,7 +8,7 @@ public class TextHandler : MonoBehaviour
 {
     Dialogue dialogue;
 
-    private void Awake()
+    private void Start()
     {
         DialogueSystem.instance.textBox.SetActive(false);
     }

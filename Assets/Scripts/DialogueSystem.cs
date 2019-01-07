@@ -10,6 +10,7 @@ public class DialogueSystem : MonoBehaviour
     public Image portrait;
     public GameObject textBox;
     public TextMeshProUGUI UIText;
+	public TextHandler textHandler;
 
     static DialogueSystem _instance;
     public static DialogueSystem instance
