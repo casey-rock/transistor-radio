@@ -20,7 +20,7 @@ MonoBehaviour:
   - text: People say I'm a monster.
     responses:
     - next: -1
-      reply: Next
+      reply: Exit
       prereq: 
       trigger: 
   - text: Funny... I don't FEEL like a monster....
