@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using TMPro.Examples;
 
 /*
  * TextHandler 
@@ -49,16 +50,69 @@ public class TextHandler : MonoBehaviour
 
 		//Prints each character in the array out one at a time with the given sound
 		//(Sounds are recommended to be .035 seconds long, I've just had good luck with that)
-        for(int i = 0; i < textArray.Length; i++)
-        {
-            DialogueSystem.instance.UIText.text += textArray[i];
-            DialogueSystem.instance.audioSource.PlayOneShot(dialogue.sound);
-            yield return new WaitForSeconds(0.02f);
-        }
+
+		//Slow message
+		if (dialogue.messages[dialogueID].messageSpeed == Message.MessageSpeed.Slow)
+		{
+			StartCoroutine(PrintText(textArray, Message.MessageSpeed.Slow));
+			
+			yield return null;
+		}
+
+		//Medium Speed message...
+		if (dialogue.messages[dialogueID].messageSpeed == Message.MessageSpeed.Medium)
+		{
+			StartCoroutine(PrintText(textArray, Message.MessageSpeed.Medium));
+			
+			yield return null;
+		}
+
+		//FAST MESSAGE
+		if (dialogue.messages[dialogueID].messageSpeed == Message.MessageSpeed.Fast)
+		{
+			StartCoroutine(PrintText(textArray, Message.MessageSpeed.Fast));
+			
+			yield return null;
+		}
+
+		
 
 		//wait for a response from the player
         StartCoroutine(WaitForResponse(dialogueID));
     }
+
+	IEnumerator PrintText(char[] textArray, Message.MessageSpeed speed)
+	{
+		float wait = 0.02f;
+		//DialogueSystem.instance.UIText.GetComponent<VertexShakeA>().enabled = false;
+
+		if(speed == Message.MessageSpeed.Slow)
+		{
+			//DialogueSystem.instance.UIText.GetComponent<VertexShakeA>().enabled = true;
+			DialogueSystem.instance.audioSource.pitch = 0.5f;
+			wait = 0.04f;
+		}
+		if (speed == Message.MessageSpeed.Medium)
+		{
+			DialogueSystem.instance.audioSource.pitch = 1f;
+			wait = 0.02f;
+		}
+		if (speed == Message.MessageSpeed.Fast)
+		{
+			DialogueSystem.instance.audioSource.pitch = 1.5f;
+			wait = 0.01f;
+		}
+
+		for (int i = 0; i < textArray.Length; i++)
+		{
+			DialogueSystem.instance.UIText.text += textArray[i];
+			DialogueSystem.instance.audioSource.PlayOneShot(dialogue.sound);
+			yield return new WaitForSeconds(wait);
+		}
+		//set it back to normal
+		//DialogueSystem.instance.UIText.GetComponent<VertexShakeA>().enabled = false;
+		DialogueSystem.instance.audioSource.pitch = 1f;
+	}
 
 	/*
 	 * Waits for a response (default spacebar) from the player.

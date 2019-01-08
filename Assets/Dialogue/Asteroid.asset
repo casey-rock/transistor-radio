@@ -17,31 +17,36 @@ MonoBehaviour:
   npcName: Asteroid
   sound: {fileID: 8300000, guid: 470b0af3b7a989544a0f79db8b76ef26, type: 3}
   messages:
-  - text: Well Hello Arin!
+  - messageSpeed: 1
+    text: Well Hello Arin!
     responses:
     - next: 1
       reply: Next
       prereq: 
       trigger: 
-  - text: This is MY GAME!!!
+  - messageSpeed: 1
+    text: This is MY GAME!!!
     responses:
     - next: 2
       reply: Next
       prereq: 
       trigger: 
-  - text: LISTEN TO THE SOUNDSSSSSSSSSSSS
+  - messageSpeed: 2
+    text: LISTEN TO THE SOUNDSSSSSSSSSSSS
     responses:
     - next: 3
       reply: Next
       prereq: 
       trigger: 
-  - text: YAYA SOUNDS
+  - messageSpeed: 0
+    text: YAYA SOUNDS
     responses:
     - next: -1
       reply: First Exit
       prereq: 
       trigger: 
-  - text: Please set me free from this monster. Sincerely, your asteroid friend
+  - messageSpeed: 1
+    text: Please set me free from this monster. Sincerely, your asteroid friend
     responses:
     - next: -1
       reply: Second Exit

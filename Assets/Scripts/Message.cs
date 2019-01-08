@@ -9,6 +9,8 @@ using UnityEngine;
 [System.Serializable]
 public class Message
 {
+	public enum MessageSpeed { Medium, Slow, Fast };
+	public MessageSpeed messageSpeed;
     public string text;
     public Response[] responses;
 }
